@@ -60,8 +60,12 @@ void difficulte()
 		printf("Vous avez choisi la difficulté 3.\n");
 	}
 	else
-		printf("Bug in if ( menudifficulte == 1)");
-
+	{
+	printf("Vous n'avez pas entré un chiffre, ou vous n'avez pas choisi de difficulté.\n");
+                        printf("Entrez un nombre : ");
+                        scanf("%d", &menudifficulte);
+			return 1;
+	}
 }
 int main( int argc, char** argv )
 {
@@ -104,6 +108,7 @@ int main( int argc, char** argv )
 	else
 	{
 		printf("Bug in if (menu == x)");
+		return 1;
 	}
 	do
 	{
@@ -123,7 +128,10 @@ int main( int argc, char** argv )
 		}
 		else
 		{
-			printf("Oula y'a un bug...");
+			printf("Vous n'avez pas entré un chiffre, ou vous n'avez pas entré le bon chiffre.\n");
+			printf("Entrez un nombre : ");
+			scanf("%d", &entremystere);
+			return 1;
 		}
 	} while (entremystere != mystere);
 
